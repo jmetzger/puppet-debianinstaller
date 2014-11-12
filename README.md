@@ -7,4 +7,5 @@ The rest is handled by puppetlabs fine debian-package
 
 ## Use it 
 wget --no-check-certificate https://github.com/jmetzger/puppet-debianinstaller/raw/master/install-puppet.sh
+
 ./install-puppet.sh
