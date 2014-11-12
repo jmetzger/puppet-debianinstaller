@@ -11,5 +11,6 @@ wget --no-check-certificate https://github.com/jmetzger/puppet-debianinstaller/r
 ./install-puppet.sh
 ```
 ## Oneline ;o 
-```wget --no-check-certificate https://github.com/jmetzger/puppet-debianinstaller/raw/master/install-puppet.sh -O - | /bin/bash 
+```
+wget --no-check-certificate https://github.com/jmetzger/puppet-debianinstaller/raw/master/install-puppet.sh -O - | /bin/bash 
 ```
