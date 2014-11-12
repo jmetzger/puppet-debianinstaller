@@ -6,5 +6,5 @@ It downloads the debian-package from puppetlabs and installs it.
 The rest is handled by puppetlabs fine debian-package 
 
 ## Use it like this
-wget --no-check-certificate https://github.com/jmetzger/puppet-debianinstaller/raw/master/install-puppet.sh
-./install-puppet.sh
+```wget --no-check-certificate https://github.com/jmetzger/puppet-debianinstaller/raw/master/install-puppet.sh
+```./install-puppet.sh
