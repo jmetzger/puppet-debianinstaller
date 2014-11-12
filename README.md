@@ -10,3 +10,6 @@ The rest is handled by puppetlabs fine debian-package
 wget --no-check-certificate https://github.com/jmetzger/puppet-debianinstaller/raw/master/install-puppet.sh
 ./install-puppet.sh
 ```
+## Oneline ;o 
+```wget --no-check-certificate https://github.com/jmetzger/puppet-debianinstaller/raw/master/install-puppet.sh -O - | /bin/bash 
+```
