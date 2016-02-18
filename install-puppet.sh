@@ -29,7 +29,7 @@ INSTALLER=https://apt.puppetlabs.com/$PACKAGE
 
 # This retrieves the correct mirror for puppet installs it
 cd /usr/src
-wget  $INSTALLER
+wget --no-check-certificate $INSTALLER
 
 if [ ! -f $PACKAGE ]
 then
