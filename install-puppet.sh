@@ -42,7 +42,7 @@ fi
 # Install the appropriate keys - changed since 10.2016
 wget --no-check-certificate $PUPPETLABS/$KEYNAME -O /tmp/$KEYNAME 
 gpg --keyid-format 0xLONG --with-fingerprint /tmp/$KEYNAME
-apt-key add $KEYNAME
+apt-key add /tmp/$KEYNAME
 rm -f /tmp/$KEYNAME
 
 dpkg -i $PACKAGE
