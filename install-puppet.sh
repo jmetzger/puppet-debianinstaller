@@ -24,8 +24,10 @@ then
 fi 
 
 RELEASE=$DEBIAN_RELEASE
+PUPPETLABS=https://apt.puppetlabs.com
 PACKAGE=puppetlabs-release-$RELEASE.deb
-INSTALLER=https://apt.puppetlabs.com/$PACKAGE
+INSTALLER=$PUPPETLABS/$PACKAGE
+KEYNAME=DEB-GPG-KEY-puppet
 
 # This retrieves the correct mirror for puppet installs it
 cd /usr/src
@@ -36,7 +38,13 @@ then
   echo "Something went wrong and puppet release was not donwloaded .. Giving up."
   exit
 fi
-  
+
+# Install the appropriate keys - changed since 10.2016
+wget --no-check-certificate $PUPPETLABS/$KEYNAME -O /tmp/$KEYNAME 
+gpg --keyid-format 0xLONG --with-fingerprint ./DEB-GPG-KEY-puppet
+apt-key add $KEYNAME
+rm -f /tmp/$KEYNAME
+
 dpkg -i $PACKAGE
 apt-get update
 apt-get install --assume-yes puppet
