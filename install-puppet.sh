@@ -41,7 +41,7 @@ fi
 
 # Install the appropriate keys - changed since 10.2016
 wget --no-check-certificate $PUPPETLABS/$KEYNAME -O /tmp/$KEYNAME 
-gpg --keyid-format 0xLONG --with-fingerprint ./DEB-GPG-KEY-puppet
+gpg --keyid-format 0xLONG --with-fingerprint /tmp/$KEYNAME
 apt-key add $KEYNAME
 rm -f /tmp/$KEYNAME
 
